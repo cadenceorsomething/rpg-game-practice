@@ -1,6 +1,11 @@
 extends CharacterBody2D
 
-@export var speed = 400
+@export var speed = 0
+@export var base_speed = 100
+@export var max_speed = 250
+@export var acceleration = 200
+@export var deceleration = 250
+
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
 var screen_size
@@ -8,11 +13,13 @@ var last_dir := Vector2.ZERO
 
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
-	anim.scale = Vector2(3,3)
+	anim.scale = Vector2(1,1)
 
 func _process(delta: float) -> void:
 	
+	$Label.text = str(int(speed))
 	var dir = get_input()
+	check_sprint(delta, dir)
 	move(delta, dir)
 
 func get_input() -> Vector2:
@@ -20,6 +27,16 @@ func get_input() -> Vector2:
 	var y = Input.get_action_strength("down") - Input.get_action_strength("up")
 	
 	return Vector2(x,y).normalized()
+
+func check_sprint(delta:float, dir:Vector2):
+	if Input.is_action_pressed("sprint") and dir.length() != 0:
+		speed = min(speed + acceleration * delta, max_speed)
+	else:
+		speed = max(speed - deceleration * delta, base_speed)
+	
+	var speed_ratio = speed / base_speed
+	
+	anim.speed_scale = speed_ratio
 
 
 func move(delta : float, direction : Vector2):

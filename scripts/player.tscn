@@ -1,7 +1,8 @@
-[gd_scene load_steps=56 format=3 uid="uid://bxisrrgn8j3by"]
+[gd_scene load_steps=57 format=3 uid="uid://bxisrrgn8j3by"]
 
 [ext_resource type="Script" uid="uid://migm7vinmq4j" path="res://src/player.gd" id="1_qm0ti"]
 [ext_resource type="Texture2D" uid="uid://omxb3h8fesni" path="res://assets/sprites/characters/player.png" id="2_fhbv5"]
+[ext_resource type="FontFile" uid="uid://p70p8cxqdxm3" path="res://fonts/PixelOperator8-Bold.ttf" id="3_fhbv5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lowyb"]
 radius = 7.0
@@ -428,3 +429,12 @@ shape = SubResource("CapsuleShape2D_lowyb")
 sprite_frames = SubResource("SpriteFrames_nrj4s")
 animation = &"death"
 frame_progress = 0.692385
+
+[node name="Label" type="Label" parent="."]
+offset_left = -11.0
+offset_top = 20.0
+offset_right = 31.0
+offset_bottom = 43.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("3_fhbv5")
+text = "START"
