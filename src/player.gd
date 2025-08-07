@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 @export var speed = 0
-@export var base_speed = 100
-@export var max_speed = 250
+@export var base_speed = 75
+@export var max_speed = 200
 @export var acceleration = 200
-@export var deceleration = 250
+@export var deceleration = 150
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -17,7 +17,6 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	
-	$Label.text = str(int(speed))
 	var dir = get_input()
 	check_sprint(delta, dir)
 	move(delta, dir)
