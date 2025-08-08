@@ -42,7 +42,7 @@ func move(delta : float, direction : Vector2):
 	# apply movement
 	
 	velocity = speed * direction
-	position += velocity * delta
+	move_and_slide()
 	
 	#update_sprite(direction)
 	if velocity.length() > 0:

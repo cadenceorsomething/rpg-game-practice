@@ -5,7 +5,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lowyb"]
 radius = 7.0
-height = 22.0
+height = 14.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lowyb"]
 atlas = ExtResource("2_fhbv5")
@@ -421,10 +421,10 @@ animations = [{
 script = ExtResource("1_qm0ti")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 8)
+position = Vector2(0, -5)
 shape = SubResource("CapsuleShape2D_lowyb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -17)
 sprite_frames = SubResource("SpriteFrames_nrj4s")
-animation = &"death"
-frame_progress = 0.692385
+animation = &"idle_back"

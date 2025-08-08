@@ -9,7 +9,11 @@ var deceleration = 150
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	var cam: Camera2D = $Camera2D
+	
+	cam.make_current()
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -17,7 +21,7 @@ func _process(delta: float) -> void:
 	var direction = get_direction()
 	var can_sprint = check_sprint()
 	
-	move(delta, direction)
+	move(direction)
 	sprint(can_sprint, delta, direction)
 	orient_sprite(direction)
 
@@ -52,9 +56,9 @@ func get_direction() -> Vector2:
 	
 	return direction.normalized()
 
-func move(delta:float, direction:Vector2):
+func move(direction:Vector2):
 	velocity = speed * direction
-	position += velocity * delta
+	move_and_slide()
 	
 func orient_sprite(direction:Vector2):
 	var sprite : AnimatedSprite2D = $AnimatedSprite2D
