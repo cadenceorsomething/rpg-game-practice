@@ -53,8 +53,10 @@ func get_direction() -> Vector2:
 	elif Input.is_action_pressed("up"):
 		direction.y -= 1
 	
+	if Input.is_action_pressed("sprint"):
+		direction = direction.normalized()
 	
-	return direction.normalized()
+	return direction
 
 func move(direction:Vector2):
 	velocity = speed * direction
