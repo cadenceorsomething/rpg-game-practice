@@ -49,18 +49,18 @@ func orient_sprite(direction: Vector2):
 	
 	if direction.length() != 0:
 		if abs(direction.x) > abs(direction.y):
-			sprite.animation = "walk_right"
+			sprite.animation = "walk_right_hostile"
 			sprite.flip_h = true if direction.x > 0 else false
 			last_flip = sprite.flip_h
 		else:
-			sprite.animation = "walk_up" if direction.y > 0 else "walk_down"
+			sprite.animation = "walk_up_hostile" if direction.y > 0 else "walk_down_hostile"
 			
 	else:
-		if sprite.animation == "walk_up": sprite.animation = "idle_up"
-		if sprite.animation == "walk_right": 
+		if sprite.animation == "walk_up_hostile": sprite.animation = "idle_up"
+		if sprite.animation == "walk_right_hostile": 
 			sprite.animation = "idle_right"
 			sprite.flip_h = last_flip
-		if sprite.animation == "walk_down": sprite.animation = "idle_down"
+		if sprite.animation == "walk_down_hostile": sprite.animation = "idle_down"
 		
 	
 	sprite.play()
