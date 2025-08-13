@@ -12,7 +12,7 @@ func _ready() -> void:
 	var cam: Camera2D = $Camera2D
 	
 	cam.make_current()
-	
+	cam.zoom *= 1.50
 	
 
 
