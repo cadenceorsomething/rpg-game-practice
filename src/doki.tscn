@@ -1,86 +1,86 @@
 [gd_scene load_steps=25 format=3 uid="uid://bke337n0e7oty"]
 
-[ext_resource type="Script" uid="uid://b0j4mapo26udy" path="res://scripts/doki.gd" id="1_7ic6d"]
-[ext_resource type="Texture2D" uid="uid://cfw5so07r0lyt" path="res://assets/sprites/characters/doki-sprite-sheet.png" id="1_bxibr"]
+[ext_resource type="Script" uid="uid://b0j4mapo26udy" path="res://scripts/doki.gd" id="1_7nor2"]
+[ext_resource type="Texture2D" uid="uid://cfw5so07r0lyt" path="res://assets/sprites/characters/doki-sprite-sheet.png" id="2_il6vl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qw3j5"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 0, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ufk7e"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 20, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_72wgm"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 40, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_08nuv"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 60, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_865us"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(0, 0, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_33u0w"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 0, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fljjt"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(32, 0, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t16vd"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 0, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ocdsd"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(0, 20, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7vhw"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 20, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_as07b"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(32, 20, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_88kw1"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 20, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r7vmu"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(0, 40, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5exd5"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 40, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_glag0"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(32, 40, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hbka4"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 40, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x2of8"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(0, 60, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hc4bo"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 60, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_po5g6"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(32, 60, 16, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f61t6"]
-atlas = ExtResource("1_bxibr")
+atlas = ExtResource("2_il6vl")
 region = Rect2(16, 60, 16, 20)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1e0sk"]
@@ -177,7 +177,7 @@ height = 10.0
 
 [node name="Doki" type="CharacterBody2D"]
 y_sort_enabled = true
-script = ExtResource("1_7ic6d")
+script = ExtResource("1_7nor2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1e0sk")

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dg25u82redilh"
-path="res://.godot/imported/Modern Pixels.ttf-b9944962459d73d577dfada0f57dd5f6.fontdata"
+path="res://.godot/imported/Modern Pixels.ttf-6ef71e97413529b8d3be740e91218f86.fontdata"
 
 [deps]
 
-source_file="res://Menu/menu tings/Modern Pixels.ttf"
-dest_files=["res://.godot/imported/Modern Pixels.ttf-b9944962459d73d577dfada0f57dd5f6.fontdata"]
+source_file="res://fonts/Modern Pixels.ttf"
+dest_files=["res://.godot/imported/Modern Pixels.ttf-6ef71e97413529b8d3be740e91218f86.fontdata"]
 
 [params]
 
