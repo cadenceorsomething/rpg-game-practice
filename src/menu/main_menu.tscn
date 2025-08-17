@@ -182,5 +182,5 @@ script = ExtResource("8_u40tv")
 [connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button_manager/Load" to="." method="_on_load_pressed"]
 [connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Button_manager/Credits and Message" to="." method="_on_credits_and_message_pressed"]
 [connection signal="pressed" from="Button_manager/Credits and Message" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Button_manager/Credits and Message" to="." method="_on_credits_and_message_pressed"]

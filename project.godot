@@ -15,6 +15,10 @@ run/main_scene="uid://csxkcr6ypn0co"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SceneTransition="*res://src/scene_transition.tscn"
+
 [input]
 
 right={

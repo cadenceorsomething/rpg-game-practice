@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://7mjpt75agenh"]
+
+[ext_resource type="Texture2D" uid="uid://1hsah03j7kk8" path="res://assets/Mini Interior Asset Pack Bed + Bath Exports by H0ndred - Itch/All Assets.png" id="1_oj3tl"]
+[ext_resource type="Texture2D" uid="uid://drfkxm8mtbdg3" path="res://assets/Package_Marketplace/atlas_16x.png" id="2_cgngl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cgngl"]
+texture = ExtResource("1_oj3tl")
+1:2/size_in_atlas = Vector2i(3, 3)
+1:2/0 = 0
+5:2/size_in_atlas = Vector2i(3, 3)
+5:2/0 = 0
+1:6/size_in_atlas = Vector2i(3, 3)
+1:6/0 = 0
+5:6/size_in_atlas = Vector2i(3, 3)
+5:6/0 = 0
+9:2/size_in_atlas = Vector2i(3, 3)
+9:2/0 = 0
+1:0/0 = 0
+3:0/0 = 0
+5:0/0 = 0
+7:0/0 = 0
+9:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wd3ws"]
+texture = ExtResource("2_cgngl")
+
+[sub_resource type="TileSet" id="TileSet_ryoud"]
+sources/0 = SubResource("TileSetAtlasSource_cgngl")
+sources/5 = SubResource("TileSetAtlasSource_wd3ws")
+
+[node name="floor" type="TileMapLayer"]
+tile_set = SubResource("TileSet_ryoud")

@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://btq0ocxkqasw7"]
+
+[ext_resource type="Script" uid="uid://1ln44jc11d0h" path="res://scripts/scene_transition.gd" id="1_ca1g8"]
+
+[sub_resource type="Animation" id="Animation_rquig"]
+resource_name = "DISSOLVE"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DissolveRect:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_q66ki"]
+resource_name = "RESET"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DissolveRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333334),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.06, 0.06, 0.06, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e2cv6"]
+_data = {
+&"DISSOLVE": SubResource("Animation_rquig"),
+&"RESET": SubResource("Animation_q66ki")
+}
+
+[node name="SceneTransition" type="CanvasLayer"]
+script = ExtResource("1_ca1g8")
+
+[node name="DissolveRect" type="ColorRect" parent="."]
+modulate = Color(0.06, 0.06, 0.06, 0)
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_e2cv6")
+}

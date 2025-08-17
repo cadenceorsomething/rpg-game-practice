@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bbn863iw7glm7"]
+
+[ext_resource type="Script" uid="uid://ddcle05tftip4" path="res://scripts/world_2.gd" id="1_qfk11"]
+[ext_resource type="PackedScene" uid="uid://d3aah5ydq8gv8" path="res://src/tilesets/tilemap.tscn" id="3_0j6xw"]
+[ext_resource type="PackedScene" uid="uid://bke337n0e7oty" path="res://src/doki.tscn" id="3_jr1ef"]
+
+[node name="World" type="Node2D"]
+script = ExtResource("1_qfk11")
+
+[node name="carpets" parent="." instance=ExtResource("3_0j6xw")]
+position = Vector2(317, 164)
+
+[node name="Doki" parent="." instance=ExtResource("3_jr1ef")]
+position = Vector2(317, 164)
